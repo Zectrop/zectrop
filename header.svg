@@ -1,0 +1,147 @@
+<svg width="100%" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29">
+        <animate attributeName="stop-color" values="#0f0c29;#24243e;#0f0c29" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#302b63">
+        <animate attributeName="stop-color" values="#302b63;#4a3f8f;#302b63" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#24243e">
+        <animate attributeName="stop-color" values="#24243e;#0f0c29;#24243e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#36BCF7"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#36BCF7">
+        <animate attributeName="offset" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="particleGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#bgGrad)"/>
+
+  <!-- Floating particles -->
+  <circle cx="120" cy="60" r="3" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="60;40;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="250" r="4" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="250;220;250" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="50" r="3" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="50;80;50" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1080" cy="230" r="5" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="230;200;230" dur="5.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="30" r="3" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="30;55;30" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="850" cy="280" r="4" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="280;255;280" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="150" r="2.5" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="150;170;150" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="950" cy="150" r="2.5" fill="url(#particleGrad)">
+    <animate attributeName="cy" values="150;130;150" dur="4.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Faint code brackets floating in background -->
+  <text x="60" y="120" font-family="Fira Code, monospace" font-size="70" fill="#ffffff" opacity="0.05">&lt;/&gt;</text>
+  <text x="990" y="290" font-family="Fira Code, monospace" font-size="70" fill="#ffffff" opacity="0.05">{ }</text>
+
+  <!-- Main glowing title -->
+  <text x="600" y="150" font-family="Fira Code, monospace" font-size="56" font-weight="700"
+        text-anchor="middle" fill="url(#textGrad)" filter="url(#glow)">
+    Hi, I'm zectrop
+    <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
+  </text>
+
+  <!-- Waving hand -->
+  <text x="870" y="150" font-size="50" text-anchor="middle" transform-origin="870px 130px">
+    👋
+    <animateTransform attributeName="transform" type="rotate"
+      values="0 870 130; 20 870 130; -10 870 130; 20 870 130; 0 870 130"
+      dur="2.2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="195" font-family="Fira Code, monospace" font-size="22"
+        text-anchor="middle" fill="#c9c9e8">
+    Learning DSA &amp; Java &middot; Building with HTML, CSS &amp; JavaScript
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect x="895" y="177" width="12" height="24" fill="#36BCF7">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating tech chips -->
+  <g font-family="Fira Code, monospace" font-size="16" font-weight="600" text-anchor="middle">
+    <g>
+      <rect x="330" y="235" width="90" height="34" rx="17" fill="#ED8B0022" stroke="#ED8B00" stroke-width="1.5">
+        <animate attributeName="y" values="235;225;235" dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="375" y="257" fill="#ED8B00">
+        Java
+        <animate attributeName="y" values="257;247;257" dur="3.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g>
+      <rect x="440" y="250" width="100" height="34" rx="17" fill="#E34F2622" stroke="#E34F26" stroke-width="1.5">
+        <animate attributeName="y" values="250;240;250" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="490" y="272" fill="#E34F26">
+        HTML5
+        <animate attributeName="y" values="272;262;272" dur="4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g>
+      <rect x="560" y="235" width="90" height="34" rx="17" fill="#1572B622" stroke="#1572B6" stroke-width="1.5">
+        <animate attributeName="y" values="235;225;235" dur="3.7s" repeatCount="indefinite"/>
+      </rect>
+      <text x="605" y="257" fill="#1572B6">
+        CSS3
+        <animate attributeName="y" values="257;247;257" dur="3.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g>
+      <rect x="670" y="250" width="130" height="34" rx="17" fill="#F7DF1E22" stroke="#F7DF1E" stroke-width="1.5">
+        <animate attributeName="y" values="250;240;250" dur="4.3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="735" y="272" fill="#F7DF1E">
+        JavaScript
+        <animate attributeName="y" values="272;262;272" dur="4.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g>
+      <rect x="815" y="235" width="120" height="34" rx="17" fill="#36BCF722" stroke="#36BCF7" stroke-width="1.5">
+        <animate attributeName="y" values="235;225;235" dur="3.9s" repeatCount="indefinite"/>
+      </rect>
+      <text x="875" y="257" fill="#36BCF7">
+        DSA
+        <animate attributeName="y" values="257;247;257" dur="3.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom wave -->
+  <path d="M0,300 C300,260 900,340 1200,300 L1200,320 L0,320 Z" fill="#000000" opacity="0.15"/>
+</svg>
