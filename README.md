@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="80%" src="./header.svg" alt="Header banner" />
+<img width="80%" src="header.svg" alt="" />
 
 <br/><br/>
 
